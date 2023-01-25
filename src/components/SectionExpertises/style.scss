@@ -1,0 +1,82 @@
+:root {
+    --cor-fundo: #202530;
+    --cor-borda-card: white;
+    --cor-texto-default: white;
+    --font-family-default: "Roboto Mono", Sans-serif;
+  }
+  
+  body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-default);
+    font-family: var(--font-family-default);
+  }
+  
+  .especialidades {
+    display: grid;
+    justify-items: center;
+  }
+  
+  .especialidades__grid {
+    width: min(95%, 1200px);
+    display: grid;
+  
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  }
+  
+  .card {
+    border: 2px var(--cor-borda-card) solid;
+    position: relative;
+    padding: 12px;
+    padding-top: 30px; /* para encaixar o logo no topo do card */
+    margin-top: 30px;
+  }
+  
+  .card__icon {
+    border: 2px solid var(--cor-borda-card);
+    border-radius: 100%;
+    padding: 12px;
+    width: 32px;
+    display: inline-flex;
+    background: var(--cor-fundo);
+    position: absolute;
+    margin: auto;
+    top: -30px;
+    right: 0;
+    left: 0;
+  }
+  
+  .icon {
+    filter: invert(1);
+  }
+  
+  /*  Fancy */
+  .chonky-underline {
+    z-index: 0;
+    position: relative;
+    color: white;
+  }
+  
+  .chonky-underline::after {
+    transition: all 0.1s ease-in-out;
+    content: "";
+    position: absolute;
+    bottom: 3%;
+    z-index: -1;
+    height: 0.3em;
+    width: 102%;
+    left: -1%;
+  }
+  
+  .underline-megenta::after {
+    background: #dc2a99;
+  }
+  
+  .underline-blue::after {
+    background: #2c49d8;
+  }
+  
+  .underline-orange::after {
+    background: #ff6b2b;
+  }
+  
