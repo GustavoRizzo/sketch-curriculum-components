@@ -8,6 +8,7 @@ export default function Navbar() {
             <Link to="/" className="navbar__title">Sketch Curriculum Components</Link>
             <ul className="navbar__options">
                 <CustomLink to="/ListExpertises">List Expertise</CustomLink>
+                <CustomLink to="/About">About</CustomLink>
             </ul>
         </nav>
     );

@@ -1,0 +1,76 @@
+:root {
+    --cor-fundo: #202530;
+    --first-perfil-color: #212a3e;
+    --secound-perfil-color: #394258;
+    --cor-borda-card: white;
+    --cor-texto-default: white;
+    --font-family-default: "Roboto Mono", Sans-serif;
+    --font-console: Consolas, monospace;
+    --color-cursor-console: white;
+  }
+  
+  body {
+    background: var(--cor-fundo);
+    color: var(--cor-texto-default);
+    font-family: var(--font-family-default);
+  }
+  
+  .about {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    height: 100vh;
+    width: 100wh;
+  
+    &_img_perfil {
+      border-radius: 50%;
+      width: min(90%, 400px);
+      border: 2px #a6ddd9 solid;
+      box-shadow: rgba(200, 200, 200, 0.45) 5px 5px 25px;
+      filter: contrast(110%);
+      background-image: linear-gradient(
+        to bottom,
+        var(--first-perfil-color),
+        var(--secound-perfil-color)
+      );
+    }
+  }
+  
+  //  CONSOLE
+  .hidden {
+    opacity: 0;
+  }
+  .console-container {
+    font-family: var(--font-consol);
+    font-size: 2em;
+    text-align: center;
+    height: 2em;
+    display: block;
+    color: white;
+    margin: auto;
+  }
+  .console-underscore {
+    font-family: var(--font-console);
+    color: var(--color-cursor-console);
+    display: inline-block;
+    top: -0.14em;
+    left: 10px;
+  }
+  
+  // Contact
+  
+  .list_contato {
+    display: flex;
+    gap: 30px;
+  
+    .linkedin {
+      width: 30px;
+      border-radius: 15%;
+    }
+  
+    .github {
+      width: 30px;
+      border-radius: 15%;
+    }
+  }
+  
