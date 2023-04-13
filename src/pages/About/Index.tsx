@@ -5,6 +5,7 @@ import './style.scss'
 import ConsoleTextAnimated from "../../components/ConsoleTextAnimated/ConsoleTextAnimated";
 
 
+
 export default function About() {
     return (
         <section className="about">
