@@ -5,15 +5,18 @@ import Home from './pages/Home';
 import ListExpertises from './pages/ListExpertises';
 import About from './pages/About/Index';
 
+
 function App() {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <>
       <Navbar />
       <div className='container'>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="ListExpertises" element={<ListExpertises />} />
-          <Route path="About" element={<About />} />
+          <Route path={`${base}`} element={<Home />} />
+          <Route path={`${base}ListExpertises`} element={<ListExpertises />} />
+          <Route path={`${base}About`} element={<About />} />
 
           <Route
             path="*"

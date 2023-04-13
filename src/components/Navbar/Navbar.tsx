@@ -3,12 +3,13 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import './style.scss'
 
 export default function Navbar() {
+    const base = import.meta.env.BASE_URL;
     return (
         <nav className="navbar">
-            <Link to="/" className="navbar__title">Sketch Curriculum Components</Link>
+            <Link to={base} className="navbar__title">Sketch Curriculum Components</Link>
             <ul className="navbar__options">
-                <CustomLink to="/ListExpertises">List Expertise</CustomLink>
-                <CustomLink to="/About">About</CustomLink>
+                <CustomLink to={`${base}ListExpertises`}>List Expertise</CustomLink>
+                <CustomLink to={`${base}About`}>About</CustomLink>
             </ul>
         </nav>
     );
