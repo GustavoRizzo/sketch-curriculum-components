@@ -3,20 +3,26 @@ import { useEffect, useState } from "react";
 export default function ConsoleTextAnimated() {
 
     const text = 'Hello';
+    const words = [
+      { word: 'Olá', color: 'red' },
+      { word: 'Mundo', color: 'green' },
+      { word: 'React', color: 'blue' },
+      { word: 'Componente', color: 'purple' },
+    ];
     
-    const timeLetter = 300;
+    const timeLetter = 100;
     
+    const [currentWordIndex, setCurrentWordIndex] = useState(0);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [currentText, setCurrentText] = useState('');
     const [isTyping, setIsTyping] = useState(true);
   
-
     useEffect(() => {
       const typingTimer = setInterval(() => {
         if (isTyping) {
           setCurrentText((prevText) => {
-            if (prevText.length < text.length) {
-              return prevText + text[currentIndex];
+            if (prevText.length < words[currentWordIndex].word.length) {
+              return prevText + words[currentWordIndex].word[currentIndex];
             } else {
               setIsTyping(false);
               return prevText;
@@ -30,6 +36,10 @@ export default function ConsoleTextAnimated() {
             } else {
               setIsTyping(true);
               setCurrentIndex(0);
+              setCurrentWordIndex((prevWordIndex) => {
+                const nextWordIndex = prevWordIndex + 1;
+                return nextWordIndex < words.length ? nextWordIndex : 0;
+              });
               return prevText;
             }
           });
@@ -40,12 +50,13 @@ export default function ConsoleTextAnimated() {
       return () => {
         clearInterval(typingTimer);
       };
-    }, [currentIndex, isTyping, text]);
+    }, [currentIndex, currentWordIndex, isTyping, words]);
 
     return (
         <div className="console-container">
-            <span id="text" />
-            {currentText}
+            <span style={{ color: words[currentWordIndex].color }}>
+              {currentText}
+            </span>
             <div className="console-underscore" id="console">
                 ▊
             </div>
