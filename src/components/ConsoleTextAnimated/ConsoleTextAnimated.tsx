@@ -2,27 +2,50 @@ import { useEffect, useState } from "react";
 
 export default function ConsoleTextAnimated() {
 
-    const word = 'Hello World!';
-    const interval = 100;
+    const text = 'Hello';
     
-    const [typedWord, setTypedWord] = useState('');
+    const timeLetter = 300;
+    
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentText, setCurrentText] = useState('');
+    const [isTyping, setIsTyping] = useState(true);
+  
 
     useEffect(() => {
-      const timer = setInterval(() => {
-        if (typedWord.length < word.length) {
-          setTypedWord(word.substring(0, typedWord.length + 1));
+      const typingTimer = setInterval(() => {
+        if (isTyping) {
+          setCurrentText((prevText) => {
+            if (prevText.length < text.length) {
+              return prevText + text[currentIndex];
+            } else {
+              setIsTyping(false);
+              return prevText;
+            }
+          });
+          setCurrentIndex((prevIndex) => prevIndex + 1);
         } else {
-          setTypedWord('');
+          setCurrentText((prevText) => {
+            if (prevText.length > 0) {
+              return prevText.slice(0, -1);
+            } else {
+              setIsTyping(true);
+              setCurrentIndex(0);
+              return prevText;
+            }
+          });
+          setCurrentIndex((prevIndex) => prevIndex - 1);
         }
-      }, interval);
+      }, timeLetter);
   
-      return () => clearInterval(timer);
-    }, [typedWord, word, interval]);
+      return () => {
+        clearInterval(typingTimer);
+      };
+    }, [currentIndex, isTyping, text]);
 
     return (
         <div className="console-container">
             <span id="text" />
-            {typedWord}
+            {currentText}
             <div className="console-underscore" id="console">
                 ▊
             </div>
