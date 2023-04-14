@@ -26,12 +26,12 @@ body {
     margin: auto;
     display: block;
     position: relative;
-    
+
     ul.rb {
         margin: 2.5em 0;
         padding: 0;
         display: inline-block;
-        
+
         li {
             list-style: none;
             margin: auto;
@@ -39,11 +39,11 @@ body {
             border-left: 1px dashed $color-time-line-border;
             padding: 0 0 50px 30px;
             position: relative;
-            
+
             &:last-child {
                 border-left: 0;
             }
-            
+
             &::before {
                 position: absolute;
                 left: -18px;
@@ -58,20 +58,22 @@ body {
                 background-image: url(https://media.licdn.com/dms/image/D4D0BAQEtWByVQ99IBA/company-logo_200_200/0/1667215242490?e=2147483647&v=beta&t=uqvZyEa7rij57GkghRugBr6dPjvySTzX3cyd5h_uM5s);
                 background-position: center center;
                 background-size: contain;
-                
-                &:hover {
+            }
+
+            &:hover {
+                &::before {
                     border-color: transparent;
                     scale: 1.5;
                     transition: all 1000ms ease-in-out;
                 }
             }
-            
+
             .title {
                 color: $color-timeline-highlight;
                 position: relative;
                 font-size: 1.2rem;
             }
-            
+
             .sub-title {
                 color: $color-timeline-highlight;
                 position: relative;
@@ -79,7 +81,7 @@ body {
             }
         }
     }
-    
+
     .text {
         color: #fff;
     }
