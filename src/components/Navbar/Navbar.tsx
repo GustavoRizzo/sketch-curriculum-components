@@ -10,6 +10,7 @@ export default function Navbar() {
             <ul className="navbar__options">
                 <CustomLink to={`${base}ListExpertises`}>List Expertise</CustomLink>
                 <CustomLink to={`${base}About`}>About</CustomLink>
+                <CustomLink to={`${base}CareerTimeline`}>CareerTimeline</CustomLink>
             </ul>
         </nav>
     );

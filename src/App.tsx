@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home';
 import ListExpertises from './pages/ListExpertises';
 import About from './pages/About/Index';
+import CareerTimeline from './pages/CareerTimeline';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path={`${base}`} element={<Home />} />
           <Route path={`${base}ListExpertises`} element={<ListExpertises />} />
           <Route path={`${base}About`} element={<About />} />
+          <Route path={`${base}CareerTimeline`} element={<CareerTimeline />} />
 
           <Route
             path="*"

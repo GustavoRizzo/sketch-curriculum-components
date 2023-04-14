@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+$background-color: #202530;
+$first-perfil-color: #212a3e;
+$secound-perfil-color: #394258;
+$cor-borda-card: white;
+$cor-texto-default: white;
+$font-family-default: "Roboto Mono", Sans-serif;
+$font-family-experience: "PT Sans", Sans-serif;
+$font-console: Consolas, monospace;
+$color-cursor-console: white;
+
+$color-time-line-border: #ffffff;
+$color-timeline-highlight: #50d890;
+
+body {
+    background: $background-color;
+    color: $cor-texto-default;
+    font-family: $font-family-default;
+}
+
+.rb-container {
+    font-family: $font-family-experience;
+    text-align: justify;
+    width: 50%;
+    margin: auto;
+    display: block;
+    position: relative;
+    
+    ul.rb {
+        margin: 2.5em 0;
+        padding: 0;
+        display: inline-block;
+        
+        li {
+            list-style: none;
+            margin: auto;
+            min-height: 50px;
+            border-left: 1px dashed $color-time-line-border;
+            padding: 0 0 50px 30px;
+            position: relative;
+            
+            &:last-child {
+                border-left: 0;
+            }
+            
+            &::before {
+                position: absolute;
+                left: -18px;
+                top: -5px;
+                content: " ";
+                border: 8px solid $color-time-line-border;
+                border-radius: 500%;
+                background: $color-timeline-highlight;
+                height: 20px;
+                width: 20px;
+                transition: all 500ms ease-in-out;
+                background-image: url(https://media.licdn.com/dms/image/D4D0BAQEtWByVQ99IBA/company-logo_200_200/0/1667215242490?e=2147483647&v=beta&t=uqvZyEa7rij57GkghRugBr6dPjvySTzX3cyd5h_uM5s);
+                background-position: center center;
+                background-size: contain;
+                
+                &:hover {
+                    border-color: transparent;
+                    scale: 1.5;
+                    transition: all 1000ms ease-in-out;
+                }
+            }
+            
+            .title {
+                color: $color-timeline-highlight;
+                position: relative;
+                font-size: 1.2rem;
+            }
+            
+            .sub-title {
+                color: $color-timeline-highlight;
+                position: relative;
+                font-size: 0.75rem;
+            }
+        }
+    }
+    
+    .text {
+        color: #fff;
+    }
+}
