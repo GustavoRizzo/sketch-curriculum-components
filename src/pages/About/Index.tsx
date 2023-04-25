@@ -1,5 +1,5 @@
 import perfil from "../../assets/images/perfil.png";
-import linkedin from "../../assets/images/linkedin_logo.png";
+import linkedin from '../../assets/images/linkedIn_logo.png';
 import github from "../../assets/images/github_logo.png";
 import './style.scss'
 import ConsoleTextAnimated from "../../components/ConsoleTextAnimated/ConsoleTextAnimated";
@@ -28,6 +28,7 @@ export default function About() {
                     <img
                         className="github"
                         src={github}
+                        alt="github"
                     />
                 </a>
             </div>
