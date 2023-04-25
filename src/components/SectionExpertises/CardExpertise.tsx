@@ -15,7 +15,7 @@ export default function CardExpertise( {title, html_text, url_img, underline_cla
                         {title}
                     </span>
                 </h2>
-                <p dangerouslySetInnerHTML={{__html: html_text}}></p>
+                <p className="card__text" dangerouslySetInnerHTML={{__html: html_text}}></p>
             </div>
         </>
     );

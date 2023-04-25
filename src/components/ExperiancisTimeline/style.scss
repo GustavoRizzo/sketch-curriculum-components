@@ -5,18 +5,18 @@ $first-perfil-color: #212a3e;
 $secound-perfil-color: #394258;
 $cor-borda-card: white;
 $cor-texto-default: white;
-$font-family-default: "Roboto Mono", Sans-serif;
+$default-font-family: "Roboto Mono", Sans-serif;
 $font-family-experience: "PT Sans", Sans-serif;
 $font-console: Consolas, monospace;
 $color-cursor-console: white;
 
-$color-time-line-border: #ffffff;
-$color-timeline-highlight: #50d890;
+$border-color-timeline: #ffffff;
+$highlight-color-timeline: #50d890;
 
 body {
     background: $background-color;
     color: $cor-texto-default;
-    font-family: $font-family-default;
+    font-family: $default-font-family;
 }
 
 .rb-container {
@@ -36,7 +36,7 @@ body {
             list-style: none;
             margin: auto;
             min-height: 50px;
-            border-left: 1px dashed $color-time-line-border;
+            border-left: 1px dashed $border-color-timeline;
             padding: 0 0 50px 30px;
             position: relative;
 
@@ -49,9 +49,9 @@ body {
                 left: -18px;
                 top: -5px;
                 content: " ";
-                border: 8px solid $color-time-line-border;
+                border: 8px solid $border-color-timeline;
                 border-radius: 500%;
-                background: $color-timeline-highlight;
+                background: $highlight-color-timeline;
                 height: 20px;
                 width: 20px;
                 transition: all 500ms ease-in-out;
@@ -69,13 +69,13 @@ body {
             }
 
             .title {
-                color: $color-timeline-highlight;
+                color: $highlight-color-timeline;
                 position: relative;
                 font-size: 1.2rem;
             }
 
             .sub-title {
-                color: $color-timeline-highlight;
+                color: $highlight-color-timeline;
                 position: relative;
                 font-size: 0.75rem;
             }
