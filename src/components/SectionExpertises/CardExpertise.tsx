@@ -1,12 +1,6 @@
+import { Expertise } from "../../types/Expertise";
 
-interface CardExpertiseProps {
-    title: string;
-    html_text: string;
-    url_img: string;
-    underline_class_css: string;
-}
-
-export default function CardExpertise( {title, html_text, url_img, underline_class_css}:CardExpertiseProps ) {
+export default function CardExpertise( {title, html_text, url_img, underline_class_css}:Expertise ) {
     return (
         <>
             <div className="card">

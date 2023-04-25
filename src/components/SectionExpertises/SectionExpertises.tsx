@@ -1,28 +1,15 @@
 import './style.scss'
 import CardExpertise from './CardExpertise';
+import { Expertise } from '../../types/Expertise';
+import data from '../../data/data.json';
+import { useEffect, useState } from 'react';
 
 export default function SectionExpertises() {
 
-    const expertises = [
-        {
-            title: 'Desenvolvimento WEB',
-            html_text: 'Atuai durente anos com a tecnologias. para fornte e para back',
-            url_img: 'https://cdn-icons-png.flaticon.com/32/9423/9423061.png',
-            underline_class_css: 'underline-megenta',
-        },
-        {
-            title: 'Analise de Dados',
-            html_text: 'Atuai durente anos com a tecnologias. para fornte e para back',
-            url_img: 'https://cdn-icons-png.flaticon.com/32/2329/2329087.png',
-            underline_class_css: 'underline-blue', 
-        },
-        {
-            title: 'Gerente de Projeto',
-            html_text: 'Atuai durente anos com a <b>tecnologias</b>. para fornte e para back',
-            url_img: 'https://cdn-icons-png.flaticon.com/32/1556/1556324.png',
-            underline_class_css: 'underline-orange', 
-        }
-    ]
+    const [expertises, setExpertises] = useState<Expertise[]>([]);
+    useEffect(() => {
+        setExpertises(data.expertises);
+      }, []);
 
     return (
         <section className="especialidades">
