@@ -1,9 +1,14 @@
 {
+    "about": {
+        "name": "Gustavo Rizzo S. M. de Albuquerque",
+        "url_linkedin": "https://www.linkedin.com/in/gustavo-albuquerque/",
+        "url_github": "https://github.com/GustavoRizzo"
+    },
     "expertises" :
     [
         {
             "title": "Software Engineer",
-            "html_text": "<p>Frontend:</p><ul><li>Javascript (React, NextJS)</li></ul><p>Backend:</p><ul><li>Python (Django)</li><li>C# (.Net Core)</li></ul>",
+            "html_text": "<p>Frontend:</p><ul><li>JavaScript (React, NextJS)</li></ul><p>Backend:</p><ul><li>Python (Django)</li><li>C# (.Net Core)</li></ul>",
             "url_img": "https://cdn-icons-png.flaticon.com/32/9423/9423061.png",
             "underline_class_css": "underline-megenta"
         },

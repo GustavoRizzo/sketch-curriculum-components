@@ -1,37 +1,25 @@
-import perfil from "../../assets/images/perfil.png";
-import linkedin from '../../assets/images/linkedIn_logo.png';
-import github from "../../assets/images/github_logo.png";
-import './style.scss'
-import ConsoleTextAnimated from "../../components/ConsoleTextAnimated/ConsoleTextAnimated";
-
+import WhoAmI from '../../components/WhoAmI/WhoAmI';
+import data from '../../data/data.json';
+import { About as AboutType } from "../../types/About";
+import { useEffect, useState } from 'react';
 
 
 export default function About() {
+
+    const [about, setAbout] = useState<AboutType>();
+    useEffect(() => {
+        setAbout(data.about);
+      }, []);
+
     return (
-        <section className="about">
-            <img
-                className="about_img_perfil"
-                src={perfil}
-                alt="perfil"
-            />
-            <h1>Gustavo Rizzo S. M. de Albuquerque</h1>
-            < ConsoleTextAnimated />
-            <div className="list_contato">
-                <a href="https://www.linkedin.com/in/gustavo-albuquerque/">
-                    <img
-                        className="linkedin"
-                        src={linkedin}
-                        alt="linkedin"
-                    />
-                </a>
-                <a href="https://github.com/GustavoRizzo">
-                    <img
-                        className="github"
-                        src={github}
-                        alt="github"
-                    />
-                </a>
-            </div>
-        </section>
+        <>
+            {about && (
+                <WhoAmI 
+                    name={about.name}
+                    url_linkedin={about.url_linkedin}
+                    url_github={about.url_github}
+                />
+            )}
+        </>
     );
 }
