@@ -18,6 +18,7 @@ export default function About() {
                     name={about.name}
                     url_linkedin={about.url_linkedin}
                     url_github={about.url_github}
+                    console_phrases={about.console_phrases}
                 />
             )}
         </>

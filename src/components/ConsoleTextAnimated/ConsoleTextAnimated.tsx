@@ -1,19 +1,10 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+import { ConsolePhrase } from "../../types/ConsolePhrase";
 
-type ConsolePhrase = {
-  phrase: string, 
-  color?: string | "#FFFFFF"
-};
-
-const ConsoleTextAnimated: React.FC = () => {
-
-  var consoleInputs: ConsolePhrase[] = [];
-  consoleInputs.push({phrase: "Hello World", color: "tomato"});
-  consoleInputs.push({phrase: "Console Text", color: "rebeccapurple"});
-  consoleInputs.push({phrase: "Made with Love", color: "lightblue"});
+export default function ConsoleTextAnimated ({console_phrases}:{console_phrases: ConsolePhrase[]}) {
 
   useEffect(() => {
-    consoleText(consoleInputs);
+    consoleText(console_phrases);
   }, []);  
 
   const consoleText = (consoleInputs: ConsolePhrase[]) => {
@@ -22,13 +13,13 @@ const ConsoleTextAnimated: React.FC = () => {
     const timeOfEachLetter = 120;
     const timeCursorBlink = 500;
 
-    let visible = true;
-    let cursorElement = document.getElementById("console-cursor");
+    let textElement = document.getElementById("console-text-id");
+    textElement!.setAttribute("style", "color:" + consoleInputs[0].color); // starting color
     let letterCount = 1;
     let directional = 1;  // 1: typing forward, -1: typing backwards
     let waiting = false;
-    let textElement = document.getElementById("console-text-id");
-    textElement!.setAttribute("style", "color:" + consoleInputs[0].color);
+    let cursorElement = document.getElementById("console-cursor");
+    let visible = true;    
 
     window.setInterval(() => {
       if (letterCount === 0 && waiting === false) {
@@ -82,5 +73,3 @@ const ConsoleTextAnimated: React.FC = () => {
     </div>
   );
 };
-
-export default ConsoleTextAnimated;

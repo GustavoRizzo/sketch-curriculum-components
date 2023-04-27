@@ -4,9 +4,11 @@ import github from "../../assets/images/github_logo.png";
 import './style.scss'
 import ConsoleTextAnimated from "../../components/ConsoleTextAnimated/ConsoleTextAnimated";
 import { About } from "../../types/About";
+import { ConsolePhrase } from "../../types/ConsolePhrase";
 
 
-export default function WhoAmI( {name, url_linkedin, url_github}:About ) {
+export default function WhoAmI( {name, url_linkedin, url_github, console_phrases}:About ) {
+
     return (
         <section className="about">
             <img
@@ -15,7 +17,7 @@ export default function WhoAmI( {name, url_linkedin, url_github}:About ) {
                 alt="perfil"
             />
             <h1>{name}</h1>
-            < ConsoleTextAnimated />
+            < ConsoleTextAnimated console_phrases={console_phrases} />
             <div className="list_contato">
                 <a href={url_linkedin}>
                     <img

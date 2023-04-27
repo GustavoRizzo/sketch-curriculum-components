@@ -2,7 +2,22 @@
     "about": {
         "name": "Gustavo Rizzo S. M. de Albuquerque",
         "url_linkedin": "https://www.linkedin.com/in/gustavo-albuquerque/",
-        "url_github": "https://github.com/GustavoRizzo"
+        "url_github": "https://github.com/GustavoRizzo",
+        "console_phrases":
+        [
+            {
+                "phrase": "Hello World",
+                "color": "tomato"
+            },
+            {
+                "phrase": "Console Text",
+                "color": "rebeccapurple"
+            },
+            {
+                "phrase": "Made with Love",
+                "color": "lightblue"
+            }
+        ]
     },
     "expertises" :
     [
