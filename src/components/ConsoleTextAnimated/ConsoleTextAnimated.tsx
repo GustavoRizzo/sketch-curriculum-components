@@ -1,42 +1,44 @@
 import React, { useEffect } from "react";
 
+type ConsolePhrase = {
+  phrase: string, 
+  color?: string | "#FFFFFF"
+};
+
 const ConsoleTextAnimated: React.FC = () => {
+
+  var consoleInputs: ConsolePhrase[] = [];
+  consoleInputs.push({phrase: "Hello World", color: "tomato"});
+  consoleInputs.push({phrase: "Console Text", color: "rebeccapurple"});
+  consoleInputs.push({phrase: "Made with Love", color: "lightblue"});
+
   useEffect(() => {
-    consoleText(
-      ["Hello World", "Console Text", "Made with Love"],
-      "text",
-      ["tomato", "rebeccapurple", "lightblue"]
-    );
-  }, []);
+    consoleText(consoleInputs);
+  }, []);  
 
-  
-
-  const consoleText = (words: string[], id: string, colors: string[] | undefined) => {
-    if (colors === undefined) colors = ["#fff"];
+  const consoleText = (consoleInputs: ConsolePhrase[]) => {
     let visible = true;
     let con = document.getElementById("console");
     let letterCount = 1;
     let x = 1;
     let waiting = false;
-    let target = document.getElementById(id);
-    target!.setAttribute("style", "color:" + colors[0]);
+    let target = document.getElementById("console-text-id");
+    target!.setAttribute("style", "color:" + consoleInputs[0].color);
 
     window.setInterval(() => {
       if (letterCount === 0 && waiting === false) {
         waiting = true;
-        target!.innerHTML = words[0].substring(0, letterCount);
+        target!.innerHTML = consoleInputs[0].phrase.substring(0, letterCount);
+
         window.setTimeout(() => {
-          let usedColor = colors!.shift();
-          if(usedColor === undefined) usedColor = colors![0];
-          colors!.push(usedColor);
-          let usedWord = words.shift();
-          words.push(usedWord!);
+          let input = consoleInputs!.shift();
+          consoleInputs.push(input!);
           x = 1;
-          target!.setAttribute("style", "color:" + colors![0]);
+          target!.setAttribute("style", "color:" + input!.color);
           letterCount += x;
           waiting = false;
         }, 100);
-      } else if (letterCount === words[0].length + 1 && waiting === false) {
+      } else if (letterCount === consoleInputs[0].phrase.length + 1 && waiting === false) {
         waiting = true;
         window.setTimeout(() => {
           x = -1;
@@ -44,7 +46,7 @@ const ConsoleTextAnimated: React.FC = () => {
           waiting = false;
         }, 3000);
       } else if (waiting === false) {
-        target!.innerHTML = words[0].substring(0, letterCount);
+        target!.innerHTML = consoleInputs[0].phrase.substring(0, letterCount);
         letterCount += x;
       }
     }, 120);
@@ -63,7 +65,7 @@ const ConsoleTextAnimated: React.FC = () => {
 
   return (
     <div className="console-container">
-      <span id="text"></span>
+      <span id="console-text-id"></span>
       <div className="console-underscore" id="console">
         ▊
       </div>
