@@ -17,56 +17,66 @@ const ConsoleTextAnimated: React.FC = () => {
   }, []);  
 
   const consoleText = (consoleInputs: ConsolePhrase[]) => {
+    const timeBeforeStartNewPhrase = 1000;
+    const timeBeforeStartErase = 3000;
+    const timeOfEachLetter = 120;
+    const timeCursorBlink = 500;
+
     let visible = true;
-    let con = document.getElementById("console");
+    let cursorElement = document.getElementById("console-cursor");
     let letterCount = 1;
-    let x = 1;
+    let directional = 1;  // 1: typing forward, -1: typing backwards
     let waiting = false;
-    let target = document.getElementById("console-text-id");
-    target!.setAttribute("style", "color:" + consoleInputs[0].color);
+    let textElement = document.getElementById("console-text-id");
+    textElement!.setAttribute("style", "color:" + consoleInputs[0].color);
 
     window.setInterval(() => {
       if (letterCount === 0 && waiting === false) {
         waiting = true;
-        target!.innerHTML = consoleInputs[0].phrase.substring(0, letterCount);
+        textElement!.innerHTML = consoleInputs[0].phrase.substring(0, letterCount);
 
+        // Change Phrase
         window.setTimeout(() => {
           let input = consoleInputs!.shift();
           consoleInputs.push(input!);
-          x = 1;
-          target!.setAttribute("style", "color:" + input!.color);
-          letterCount += x;
+          directional = 1;          
+          letterCount += directional;
           waiting = false;
-        }, 100);
+          // set the new color
+          textElement!.setAttribute("style", "color:" + input!.color);
+        }, timeBeforeStartNewPhrase);
+
       } else if (letterCount === consoleInputs[0].phrase.length + 1 && waiting === false) {
+        // finished writing the phrase
         waiting = true;
         window.setTimeout(() => {
-          x = -1;
-          letterCount += x;
+          directional = -1;
+          letterCount += directional;
           waiting = false;
-        }, 3000);
+        }, timeBeforeStartErase);
       } else if (waiting === false) {
-        target!.innerHTML = consoleInputs[0].phrase.substring(0, letterCount);
-        letterCount += x;
+        textElement!.innerHTML = consoleInputs[0].phrase.substring(0, letterCount);
+        letterCount += directional;
       }
-    }, 120);
+    }, timeOfEachLetter);
 
+    // Make the cursor blink
     window.setInterval(() => {
       if (visible === true) {
-        con!.className = "console-underscore hidden";
+        cursorElement!.className = "console-underscore hidden";
         visible = false;
       } else {
-        con!.className = "console-underscore";
+        cursorElement!.className = "console-underscore";
         visible = true;
       }
-    }, 500);
+    }, timeCursorBlink);
 
   };
 
   return (
     <div className="console-container">
       <span id="console-text-id"></span>
-      <div className="console-underscore" id="console">
+      <div className="console-underscore hidden" id="console-cursor">
         ▊
       </div>
     </div>
