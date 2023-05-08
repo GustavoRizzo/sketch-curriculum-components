@@ -6,16 +6,20 @@
         "console_phrases":
         [
             {
-                "phrase": "Hello World",
+                "phrase": "Software Developer",
                 "color": "tomato"
             },
             {
-                "phrase": "Console Text",
-                "color": "rebeccapurple"
+                "phrase": "Data Analyst",
+                "color": "fuchsia"
             },
             {
-                "phrase": "Made with Love",
-                "color": "lightblue"
+                "phrase": "Project Manager",
+                "color": "gold"
+            },
+            {
+                "phrase": "Technology Lover",
+                "color": "chartreuse"
             }
         ]
     },

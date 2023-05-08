@@ -4,7 +4,6 @@ import github from "../../assets/images/github_logo.png";
 import './style.scss'
 import ConsoleTextAnimated from "../../components/ConsoleTextAnimated/ConsoleTextAnimated";
 import { About } from "../../types/About";
-import { ConsolePhrase } from "../../types/ConsolePhrase";
 
 
 export default function WhoAmI( {name, url_linkedin, url_github, console_phrases}:About ) {

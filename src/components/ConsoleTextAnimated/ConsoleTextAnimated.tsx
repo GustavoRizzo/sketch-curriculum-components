@@ -34,7 +34,7 @@ export default function ConsoleTextAnimated ({console_phrases}:{console_phrases:
           letterCount += directional;
           waiting = false;
           // set the new color
-          textElement!.setAttribute("style", "color:" + input!.color);
+          textElement!.setAttribute("style", "color:" + consoleInputs[0]!.color);
         }, timeBeforeStartNewPhrase);
 
       } else if (letterCount === consoleInputs[0].phrase.length + 1 && waiting === false) {
