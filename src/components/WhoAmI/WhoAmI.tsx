@@ -1,4 +1,3 @@
-import perfil from "../../assets/images/perfil.png";
 import linkedin from '../../assets/images/linkedIn_logo.png';
 import github from "../../assets/images/github_logo.png";
 import './style.scss'
@@ -6,13 +5,15 @@ import ConsoleTextAnimated from "../../components/ConsoleTextAnimated/ConsoleTex
 import { About } from "../../types/About";
 
 
-export default function WhoAmI( {name, url_linkedin, url_github, console_phrases}:About ) {
+export default function WhoAmI( {name, perfil_img, url_linkedin, url_github, console_phrases}:About ) {
+
+    const imgUrl = new URL(perfil_img, import.meta.url).href
 
     return (
         <section className="about">
             <img
                 className="about_img_perfil"
-                src={perfil}
+                src={imgUrl}
                 alt="perfil"
             />
             <h1>{name}</h1>

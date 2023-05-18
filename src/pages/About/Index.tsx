@@ -16,6 +16,7 @@ export default function About() {
             {about && (
                 <WhoAmI 
                     name={about.name}
+                    perfil_img={about.perfil_img}
                     url_linkedin={about.url_linkedin}
                     url_github={about.url_github}
                     console_phrases={about.console_phrases}
