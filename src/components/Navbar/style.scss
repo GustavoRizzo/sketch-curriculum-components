@@ -9,7 +9,7 @@
     height: 50px;
 
     &__title {
-        font-size: 2rem;
+        font-size: clamp(1.0rem, 2vw, 2rem);
         display: flex;
         align-items: center;
         text-decoration: none;
