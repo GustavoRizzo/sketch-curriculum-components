@@ -5,7 +5,7 @@ import './style.scss'
 export default function Navbar() {
     const base = import.meta.env.BASE_URL;
 
-    const [isHidden, setIsHidden] = useState(false);
+    const [isHidden, setIsHidden] = useState(true);
 
     const toggleVisibility = () => {
       setIsHidden(!isHidden);
