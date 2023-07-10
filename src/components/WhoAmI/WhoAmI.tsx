@@ -1,5 +1,5 @@
-import linkedin from '../../assets/images/linkedIn_logo.png';
-import github from "../../assets/images/github_logo.png";
+import linkedin from '../../public/images/linkedIn_logo.png';
+import github from "../../public/images/github_logo.png";
 import './style.scss'
 import ConsoleTextAnimated from "../../components/ConsoleTextAnimated/ConsoleTextAnimated";
 import { About } from "../../types/About";
