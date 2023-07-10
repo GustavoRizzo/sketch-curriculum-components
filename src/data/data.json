@@ -1,6 +1,6 @@
 {
     "about": {
-        "perfil_img": "../../../public/images/perfil.png",
+        "perfil_img": "/perfil.png",
         "name": "Gustavo Rizzo S. M. de Albuquerque",
         "url_linkedin": "https://www.linkedin.com/in/gustavo-albuquerque/",
         "url_github": "https://github.com/GustavoRizzo",
