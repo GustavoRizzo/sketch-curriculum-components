@@ -1,21 +1,10 @@
-:root {
-    --cor-fundo: #202530;
-    --first-perfil-color: #212a3e;
-    --secound-perfil-color: #394258;
-    --cor-borda-card: white;
-    --cor-texto-default: white;
-    --default-font-family: "Roboto Mono", Sans-serif;
-    --font-console: Consolas, monospace;
-    --color-cursor-console: white;
+@import "../../styles/variables.scss";
 
-    --color-orange: #ff7f50;
-    --numero-absurdo: 50px;
-  }
-  
+ 
   body {
-    background: var(--cor-fundo);
-    color: var(--cor-texto-default);
-    font-family: var(--default-font-family);
+    background: $background-color;
+    color: $default-text-color;
+    font-family: $default-font-family;
   }
   
   .about {
@@ -28,13 +17,15 @@
     &_img_perfil {
       border-radius: 50%;
       width: min(90%, 400px);
+      aspect-ratio: 1/1;
+      object-fit: cover;
       border: 2px #a6ddd9 solid;
       box-shadow: rgba(200, 200, 200, 0.45) 5px 5px 25px;
       filter: contrast(110%);
       background-image: linear-gradient(
         to bottom,
-        var(--first-perfil-color),
-        var(--secound-perfil-color)
+        $first-perfil-color,
+        $secound-perfil-color
       );
     }
   }
@@ -44,7 +35,7 @@
     opacity: 0;
   }
   .console-container {
-    font-family: var(--font-consol);
+    font-family: $font-console;
     font-size: 2em;
     text-align: center;
     height: 2em;
@@ -53,8 +44,8 @@
     margin: auto;
   }
   .console-underscore {
-    font-family: var(--font-console);
-    color: var(--color-cursor-console);
+    font-family: $font-console;
+    color: $color-cursor-console;
     display: inline-block;
     top: -0.14em;
     left: 10px;
