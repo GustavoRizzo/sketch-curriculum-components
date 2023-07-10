@@ -1,26 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 
-$background-color: #202530;
-$first-perfil-color: #212a3e;
-$secound-perfil-color: #394258;
-$cor-borda-card: white;
-$cor-texto-default: white;
-$default-font-family: "Roboto Mono", Sans-serif;
-$font-family-experience: "PT Sans", Sans-serif;
-$font-console: Consolas, monospace;
-$color-cursor-console: white;
-
-$border-color-timeline: #ffffff;
-$highlight-color-timeline: #50d890;
+@import "../../styles/_variables.scss";
 
 body {
     background: $background-color;
-    color: $cor-texto-default;
+    color: $default-text-color;
     font-family: $default-font-family;
 }
 
 .rb-container {
-    font-family: $font-family-experience;
+    font-family: $default-font-family;
     text-align: justify;
     width: min(95%, 800px);
     margin: auto;
