@@ -7,13 +7,11 @@ import { About } from "../../types/About";
 
 export default function WhoAmI( {name, perfil_img, url_linkedin, url_github, console_phrases}:About ) {
 
-    const imgUrl = new URL(perfil_img, import.meta.url).href
-
     return (
         <section className="about">
             <img
                 className="about_img_perfil"
-                src={imgUrl}
+                src={perfil_img}
                 alt="perfil"
             />
             <h1>{name}</h1>
