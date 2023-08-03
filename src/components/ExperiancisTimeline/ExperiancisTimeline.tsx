@@ -1,14 +1,10 @@
 import React from 'react';
+import { Experience as ExperienceType } from "../../types/Experience";
 import './style.scss'
 
-interface Experience {
-  titulo: string;
-  subtitulo: string;
-  texto: string;
-}
 
 interface ExperiencesTimelineProps {
-  experiences: Experience[];
+  experiences: ExperienceType[];
 }
 
 const ExperiencesTimeline: React.FC<ExperiencesTimelineProps> = ({ experiences }) => {
@@ -17,9 +13,9 @@ const ExperiencesTimeline: React.FC<ExperiencesTimelineProps> = ({ experiences }
       <ul className="rb">
         {experiences.map((experience, index) => (
           <li className="rb-item" key={index}>
-            <div className="title">{experience.titulo}</div>
-            <div className="sub-title">{experience.subtitulo}</div>
-            <div className="text">{experience.texto}</div>
+            <div className="title">{experience.title}</div>
+            <div className="sub-title">{experience.subtitle}</div>
+            <div className="text">{experience.text}</div>
           </li>
         ))}
       </ul>
