@@ -45,34 +45,59 @@
     ],
     "experiences": [
         {
-            "title": "WEB DEVELOPER",
-            "subtitle": "at ATIVA INVESTIMENTOS",
-            "text": "Chris Serrano posted a photo on your wall.",
-            "company_logo": "logo-ativa.jpg"
+            "title": "FULL STACK DEVELOPER",
+            "subtitle": "at VISIAN SYSTEMS",
+            "text": "Working for a software factory that provides services to clients in England, engaging in various projects across different domains. Some of the projects include e-commerce platforms, client clustering and classification systems, and real-time people tracking systems for airports.",
+            "company_logo": "logo-visian.jpg",
+            "company_url": "https://www.visiansystems.com/"
         },
         {
-            "title": "WEB DEVELOPER",
-            "subtitle": "at ATIVA INVESTIMENTOS",
-            "text": "Mia Redwood commented on your last post. Lorem Ipsum has been the industry\"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            "title": "FOUNDER",
+            "subtitle": "at DANDO SOPA",
+            "text": "After years in the corporate world, my partner and I ventured into entrepreneurship, founding Dado Sopa—a retail ecommerce business. The name was inspired by a Brazilian expression akin to 'sitting duck'. Although the store eventually went offline due to profitability challenges 😞. But we continue our partnership to pursue freelance projects",
             "company_logo": "logo-dando-sopa.png"
         },
         {
-            "title": "WEB DEVELOPER",
+            "title": "DATA ANALYST",
             "subtitle": "at ATIVA INVESTIMENTOS",
-            "text": "Chris Serrano posted a photo on your wall.",
-            "company_logo": "logo-ativa.jpg"
+            "text": "Co-founded a team responsible for overseeing the entire analytical environment of the company. Extracted and cleansed data (using Pentaho and SSIS), restructured and enriched data to establish a Data Warehouse (utilizing Python and SAS), and presented information through dashboards (using Power BI) to both company employees and C-level executives.",
+            "company_logo": "logo-ativa.jpg",
+            "company_url": "https://www.ativainvestimentos.com.br/"
+        },
+        {
+            "title": "PROJECT MANAGER",
+            "subtitle": "at ATIVA INVESTIMENTOS",
+            "text": "Managed both in-house development teams and outsourced members. Provided guidance and support in the realm of stock brokerage systems, encompassing trading platforms, risk management, investment funds, and customer acquisition, thereby facilitating development efforts.",
+            "company_logo": "logo-ativa.jpg",
+            "company_url": "https://www.ativainvestimentos.com.br/"
         },
         {
             "title": "WEB DEVELOPER",
             "subtitle": "at ATIVA INVESTIMENTOS",
-            "text": "John Doe liked your post.",
-            "company_logo": "logo-ativa.jpg"
+            "text": "Accountable for the enhancement and maintenance of web applications utilized by both external end-users and internal clients within the company. Primarily engaged with a Microsoft stack, leveraging Azure, C# (.Net Core), Asp.Net, and VUE.js technologies.",
+            "company_logo": "logo-ativa.jpg",
+            "company_url": "https://www.ativainvestimentos.com.br/"
         },
         {
-            "title": "WEB DEVELOPER",
-            "subtitle": "at ATIVA INVESTIMENTOS",
-            "text": "John Doe liked your post.",
-            "company_logo": "logo-ativa.jpg"
+            "title": "DATA ANALYST IN LOGISTICS",
+            "subtitle": "at Stone Co",
+            "text": "Responsible for generating and automating KPI reports on internal logistics in Brazil and discussing them with the leaders of each branch to create improvement plans.",
+            "company_logo": "logo-stone.jpg",
+            "company_url": "https://investors.stone.co/"
+        },
+        {
+            "title": "CUSTOMER RELATIONSHIP MANAGER INTERN",
+            "subtitle": "at Stone Co",
+            "text": "The role encompassed addressing customer inquiries and needs through email, phone, and chat platforms, elucidating product-related queries, and engaging in negotiations regarding commercial taxation.",
+            "company_logo": "logo-stone.jpg",
+            "company_url": "https://investors.stone.co/"
+        },
+        {
+            "title": "WEB DEVELOPER INTERN",
+            "subtitle": "at at PUC-RIO in LIRA, the Laboratory of Applied Robotic Intelligence",
+            "text": "Engaged in the maintenance and updates of the laboratory's website while providing assistance to researchers in minor tasks.",
+            "company_logo": "PUC-Rio-Logo.jpg",
+            "company_url": "https://www.puc-rio.br/"
         }
     ]
 }
