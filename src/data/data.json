@@ -4,8 +4,7 @@
         "name": "Gustavo Rizzo S. M. de Albuquerque",
         "url_linkedin": "https://www.linkedin.com/in/gustavo-albuquerque/",
         "url_github": "https://github.com/GustavoRizzo",
-        "console_phrases":
-        [
+        "console_phrases": [
             {
                 "phrase": "Software Developer",
                 "color": "tomato"
@@ -24,8 +23,7 @@
             }
         ]
     },
-    "expertises" :
-    [
+    "expertises": [
         {
             "title": "Software Engineer",
             "html_text": "<p><b>Backend:</b><br><ul><li>Python (Django)</li><li>C# (.Net Core)</li></ul></p> <p><b>Frontend:</b><ul><li>JavaScript/Typescript (React, NextJS)</li></ul></p>",
@@ -45,32 +43,31 @@
             "underline_class_css": "underline-orange"
         }
     ],
-    "experiences" : 
-    [
+    "experiences": [
         {
-          "title": "WEB DEVELOPER",
-          "subtitulotitle": "at ATIVA INVESTIMENTOS",
-          "text": "Chris Serrano posted a photo on your wall."
-        },
-        {
-          "title": "WEB DEVELOPER",
-          "subtitulotitle": "at ATIVA INVESTIMENTOS",
-          "text": "Mia Redwood commented on your last post. Lorem Ipsum has been the industry\"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        },
-        {
-          "title": "WEB DEVELOPER",
-          "subtitulotitle": "at ATIVA INVESTIMENTOS",
-          "text": "Chris Serrano posted a photo on your wall."
-        },
-        {
-          "title": "WEB DEVELOPER",
-          "subtitulotitle": "at ATIVA INVESTIMENTOS",
-          "text": "John Doe liked your post."
+            "title": "WEB DEVELOPER",
+            "subtitle": "at ATIVA INVESTIMENTOS",
+            "text": "Chris Serrano posted a photo on your wall."
         },
         {
             "title": "WEB DEVELOPER",
-            "subtitulotitle": "at ATIVA INVESTIMENTOS",
+            "subtitle": "at ATIVA INVESTIMENTOS",
+            "text": "Mia Redwood commented on your last post. Lorem Ipsum has been the industry\"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        },
+        {
+            "title": "WEB DEVELOPER",
+            "subtitle": "at ATIVA INVESTIMENTOS",
+            "text": "Chris Serrano posted a photo on your wall."
+        },
+        {
+            "title": "WEB DEVELOPER",
+            "subtitle": "at ATIVA INVESTIMENTOS",
             "text": "John Doe liked your post."
-          }
+        },
+        {
+            "title": "WEB DEVELOPER",
+            "subtitle": "at ATIVA INVESTIMENTOS",
+            "text": "John Doe liked your post."
+        }
     ]
 }
