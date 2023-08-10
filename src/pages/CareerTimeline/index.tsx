@@ -1,4 +1,4 @@
-import ExperiencesTimeline from "../../components/ExperiancisTimeline/ExperiancisTimeline";
+import ExperiencesTimeline from "../../components/ExperiancisTimeline/ExperiencisTimeline";
 import { Experience as ExperienceType } from "../../types/Experience";
 import data from '../../data/data.json';
 import { useEffect, useState } from 'react';

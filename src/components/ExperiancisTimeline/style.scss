@@ -33,7 +33,7 @@ body {
                 border-left: 0;
             }
 
-            &::before {
+            .company-logo {
                 position: absolute;
                 left: -18px;
                 top: -5px;
@@ -47,10 +47,8 @@ body {
                 background-image: url(https://media.licdn.com/dms/image/D4D0BAQEtWByVQ99IBA/company-logo_200_200/0/1667215242490?e=2147483647&v=beta&t=uqvZyEa7rij57GkghRugBr6dPjvySTzX3cyd5h_uM5s);
                 background-position: center center;
                 background-size: contain;
-            }
 
-            &:hover {
-                &::before {
+                &:hover {
                     border-color: transparent;
                     scale: 1.5;
                     transition: all 1000ms ease-in-out;
