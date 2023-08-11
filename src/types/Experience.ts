@@ -3,4 +3,5 @@ export type Experience = {
     subtitle: string;
     text: string;
     company_logo: string;
+    company_url: string;
   };

@@ -13,7 +13,10 @@ const ExperiencesTimeline: React.FC<ExperiencesTimelineProps> = ({ experiences }
       <ul className="rb">
         {experiences.map((experience, index) => (
           <li className="rb-item" key={index}>
-            <div className="company-logo" style={{ backgroundImage: `url(${experience.company_logo})` }}></div>
+            <a className="company-logo" 
+              style={{ backgroundImage: `url(${experience.company_logo})` }}
+              href={experience.company_url} target="_blank" rel="noreferrer"
+              ></a>
             <div className="paragraph">
               <div className="title">{experience.title}</div>
               <div className="sub-title">{experience.subtitle}</div>

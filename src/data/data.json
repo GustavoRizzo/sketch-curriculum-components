@@ -26,7 +26,7 @@
     "expertises": [
         {
             "title": "Software Engineer",
-            "html_text": "<p><b>Backend:</b><br><ul><li>Python (Django)</li><li>C# (.Net Core)</li></ul></p> <p><b>Frontend:</b><ul><li>JavaScript/Typescript (React, NextJS)</li></ul></p>",
+            "html_text": "<p><b>Backend:</b><br><ul><li>Python (Django)</li><li>C# (.Net Core)</li></ul></p> <p><b>Frontend:</b><ul><li>JavaScript/Typescript (VUE, React, NextJS)</li></ul></p>",
             "url_img": "https://cdn-icons-png.flaticon.com/32/9423/9423061.png",
             "underline_class_css": "underline-megenta"
         },
@@ -54,7 +54,7 @@
         {
             "title": "FOUNDER",
             "subtitle": "at DANDO SOPA",
-            "text": "After years in the corporate world, my partner and I ventured into entrepreneurship, founding Dado Sopa—a retail ecommerce business. The name was inspired by a Brazilian expression akin to 'sitting duck'. Although the store eventually went offline due to profitability challenges 😞. But we continue our partnership to pursue freelance projects",
+            "text": "After years in the corporate world, my partner and I ventured into entrepreneurship, founding Dado Sopa — a retail ecommerce business. The name was inspired by a Brazilian expression akin to 'sitting duck'. Although the store eventually went offline due to profitability challenges 😞. But we continue our partnership to pursue freelance projects",
             "company_logo": "logo-dando-sopa.png"
         },
         {
@@ -67,7 +67,7 @@
         {
             "title": "PROJECT MANAGER",
             "subtitle": "at ATIVA INVESTIMENTOS",
-            "text": "Managed both in-house development teams and outsourced members. Provided guidance and support in the realm of stock brokerage systems, encompassing trading platforms, risk management, investment funds, and customer acquisition, thereby facilitating development efforts.",
+            "text": "Managed both in-house development teams and outsourced members. Provided guidance and support in the realm of stock brokerage systems, risk management, investment funds and customer acquisition.",
             "company_logo": "logo-ativa.jpg",
             "company_url": "https://www.ativainvestimentos.com.br/"
         },
@@ -80,21 +80,21 @@
         },
         {
             "title": "DATA ANALYST IN LOGISTICS",
-            "subtitle": "at Stone Co",
+            "subtitle": "at STONE CO",
             "text": "Responsible for generating and automating KPI reports on internal logistics in Brazil and discussing them with the leaders of each branch to create improvement plans.",
             "company_logo": "logo-stone.jpg",
             "company_url": "https://investors.stone.co/"
         },
         {
             "title": "CUSTOMER RELATIONSHIP MANAGER INTERN",
-            "subtitle": "at Stone Co",
+            "subtitle": "at STONE CO",
             "text": "The role encompassed addressing customer inquiries and needs through email, phone, and chat platforms, elucidating product-related queries, and engaging in negotiations regarding commercial taxation.",
             "company_logo": "logo-stone.jpg",
             "company_url": "https://investors.stone.co/"
         },
         {
             "title": "WEB DEVELOPER INTERN",
-            "subtitle": "at at PUC-RIO in LIRA, the Laboratory of Applied Robotic Intelligence",
+            "subtitle": "at PUC-RIO in LIRA, the LABORATORY of APPLIED ROBOTIC INTELLIGENCE",
             "text": "Engaged in the maintenance and updates of the laboratory's website while providing assistance to researchers in minor tasks.",
             "company_logo": "PUC-Rio-Logo.jpg",
             "company_url": "https://www.puc-rio.br/"
