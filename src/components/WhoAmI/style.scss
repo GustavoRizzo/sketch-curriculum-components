@@ -11,8 +11,9 @@
     display: grid;
     justify-items: center;
     align-content: center;
-    height: 100vh;
+    min-height: 90vh;
     width: 100wh;
+    padding-top: 50px;
   
     &_img_perfil {
       border-radius: 50%;
@@ -36,7 +37,7 @@
   }
   .console-container {
     font-family: $font-console;
-    font-size: 2em;
+    font-size: 1.9em;
     text-align: center;
     height: 2em;
     display: block;

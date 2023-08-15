@@ -4,7 +4,7 @@ import ListExpertises from "../ListExpertises";
 
 export default function Home() {
     return (
-      <main>
+      <main style={{padding: '0 1rem'}}>
         <About />
         <ListExpertises />
         <CareerTimeline />

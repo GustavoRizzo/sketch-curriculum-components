@@ -11,9 +11,9 @@ export default function CareerTimeline() {
       console.log('expertises:', expertises);
     
       return (
-        <div>
-          <h2>Career Timeline</h2>
+        <section>
+          <h1>Career Timeline</h1>
           <ExperiencesTimeline experiences={expertises} />
-        </div>
+        </section>
       );
 }

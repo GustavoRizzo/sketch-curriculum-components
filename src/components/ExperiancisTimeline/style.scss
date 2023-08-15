@@ -12,12 +12,10 @@ body {
     font-family: $default-font-family;
     text-align: justify;
     width: min(95%, 800px);
-    margin: auto;
     display: block;
     position: relative;
 
     ul.rb {
-        margin-top: 2.5em;
         margin-bottom: 2.5em;
         margin-left: ($logo-radio+$logo-border-width);
         padding: 0;

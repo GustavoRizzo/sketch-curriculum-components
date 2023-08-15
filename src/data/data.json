@@ -25,7 +25,7 @@
     },
     "expertises": [
         {
-            "title": "Software Engineer",
+            "title": "Software Developer",
             "html_text": "<p><b>Backend:</b><br><ul><li>Python (Django)</li><li>C# (.Net Core)</li></ul></p> <p><b>Frontend:</b><ul><li>JavaScript/Typescript (VUE, React, NextJS)</li></ul></p>",
             "url_img": "https://cdn-icons-png.flaticon.com/32/9423/9423061.png",
             "underline_class_css": "underline-megenta"
