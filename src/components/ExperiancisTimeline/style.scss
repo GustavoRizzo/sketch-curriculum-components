@@ -8,11 +8,6 @@ body {
     font-family: $default-font-family;
 }
 
-// logo radio variable
-$logo-radio: 20px;
-$logo-border-width: 7px;
-$logo-scale: (($logo-radio+$logo-border-width)/$logo-radio);
-
 .rb-container {
     font-family: $default-font-family;
     text-align: justify;

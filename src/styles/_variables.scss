@@ -10,6 +10,9 @@ $card-border-color-expertise: white;
 // Colors - Timeline
 $border-color-timeline: white;
 $highlight-color-timeline: #50d890;
+$logo-radio: 20px;
+$logo-border-width: 7px;
+$logo-scale: calc( ($logo-radio + $logo-border-width) / $logo-radio);
 
 // Fonts
 $default-font-family: "Roboto Mono", Sans-serif;
