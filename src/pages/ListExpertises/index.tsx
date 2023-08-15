@@ -1,4 +1,4 @@
-import SectionExpertises from '../components/SectionExpertises/SectionExpertises';
+import SectionExpertises from '../../components/SectionExpertises/SectionExpertises';
 
 export default function ListExpertises() {
     return (
