@@ -11,7 +11,7 @@ export default function CareerTimeline() {
       console.log('expertises:', expertises);
     
       return (
-        <section>
+        <section style={{ display: 'grid', justifyItems: 'center', alignContent: 'center' }}>
           <h1>Career Timeline</h1>
           <ExperiencesTimeline experiences={expertises} />
         </section>
