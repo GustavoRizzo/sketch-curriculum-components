@@ -4,4 +4,5 @@ export type Experience = {
     text: string;
     company_logo: string;
     company_url?: string;
+    initial_date: string;
   };
