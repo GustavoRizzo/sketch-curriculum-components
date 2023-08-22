@@ -9,7 +9,7 @@ export default function ConsoleTextAnimated ({console_phrases}:{console_phrases:
 
   const consoleText = (consoleInputs: ConsolePhrase[]) => {
     const timeBeforeStartNewPhrase = 1000;
-    const timeBeforeStartErase = 3000;
+    const timeBeforeStartErase = 2000;
     const timeOfEachLetter = 120;
     const timeCursorBlink = 500;
 
