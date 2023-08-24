@@ -33,7 +33,7 @@
         },
         {
             "title": "Data Analysis",
-            "html_text": "<p><b>Data Visualization Tool:</b></p><ul><li>Power BI</li></ul>   <p><b>ETL Tools</b>:</p><ul><li>Apache Spark</li><li>SSIS</li></ul>   <p><b>Database:</b></p><ul><li>SQLServer</li><li>MongoDB</li><li>Cloud TreasureData</li></ul>",
+            "html_text": "<p><b>Data Visualization Tool:</b></p><ul><li>Power BI</li></ul>   <p><b>ETL Tools</b>:</p><ul><li>Apache Spark</li><li>SSIS</li><li>Pentaho</li></ul>   <p><b>Database:</b></p><ul><li>SQLServer</li><li>Oracle</li><li>MongoDB</li><li>Cloud TreasureData</li></ul>",
             "url_img": "https://cdn-icons-png.flaticon.com/32/2329/2329087.png",
             "underline_class_css": "underline-blue",
             "initial_date": "2023-02-01"
@@ -79,7 +79,7 @@
             "initial_date": "2019-07-01"
         },
         {
-            "title": "WEB DEVELOPER",
+            "title": "SOFTWARE DEVELOPER",
             "subtitle": "at ATIVA INVESTIMENTOS",
             "text": "Accountable for the enhancement and maintenance of web applications utilized by both external end-users and internal clients within the company. Stack: Azure, C# (.Net Core), Asp.Net and VUE.js.",
             "company_logo": "logo-ativa.jpg",
