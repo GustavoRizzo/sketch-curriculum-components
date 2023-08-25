@@ -13,7 +13,7 @@ export default function SectionExpertises() {
 
     return (
         <section className="especialidades">
-            <h1>Experience</h1>
+            <h1 style={{ marginTop: '5px' }}>Experience</h1>
             <div className="especialidades__grid">
 
                 {expertises.map((item, index) => (
