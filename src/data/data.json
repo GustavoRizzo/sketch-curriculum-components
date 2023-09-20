@@ -32,7 +32,7 @@
             "initial_date": "2023-02-01"
         },
         {
-            "title": "Data Analysis",
+            "title": "Data Analyst",
             "html_text": "<p><b>Data Visualization Tool:</b></p><ul><li>Power BI</li></ul>   <p><b>ETL Tools</b>:</p><ul><li>Apache Spark</li><li>SSIS</li><li>Pentaho</li></ul>   <p><b>Database:</b></p><ul><li>SQLServer</li><li>Oracle</li><li>MongoDB</li><li>Cloud TreasureData</li></ul>",
             "url_img": "https://cdn-icons-png.flaticon.com/32/2329/2329087.png",
             "underline_class_css": "underline-blue",
