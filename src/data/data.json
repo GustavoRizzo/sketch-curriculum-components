@@ -26,14 +26,14 @@
     "expertises": [
         {
             "title": "Software Developer",
-            "html_text": "<p><b>Backend:</b><br><ul><li>Python (Django)</li><li>C# (.Net Core)</li></ul></p> <p><b>Frontend:</b><ul><li>JavaScript/Typescript (VUE, React, NextJS)</li></ul></p>",
+            "html_text": "<p><b>Backend:</b><br><ul><li>Python (Django, FastAPI)</li><li>C# (.Net Core)</li></ul></p><p><b>Frontend:</b><ul><li>JavaScript/Typescript (VUE, React, NextJS)</li></ul></p><p><b>DevOps:</b><ul><li>Docker</li><li>Cloud (Azure, AWS)</li></ul></p>",
             "url_img": "https://cdn-icons-png.flaticon.com/32/9423/9423061.png",
             "underline_class_css": "underline-megenta",
             "initial_date": "2023-02-01"
         },
         {
             "title": "Data Analyst",
-            "html_text": "<p><b>Data Visualization Tool:</b></p><ul><li>Power BI</li></ul>   <p><b>ETL Tools</b>:</p><ul><li>Apache Spark</li><li>SSIS</li><li>Pentaho</li></ul>   <p><b>Database:</b></p><ul><li>SQLServer</li><li>Oracle</li><li>MongoDB</li><li>Cloud TreasureData</li></ul>",
+            "html_text": "<p><b>Data Visualization Tool:</b></p><ul><li>Power BI</li><li>Streamlit</li></ul><p><b>ETL Tools:</b></p><ul><li>Apache Spark</li><li>SSIS</li><li>Pentaho</li></ul><p><b>Database:</b></p><ul style='text-align: left'><li><b>Relational:</b> <span>SQLServer, Oracle, PostgreSQL, MySQL</span></li><li><b>NoSQL:</b> <span>MongoDB</span></li><li><b>OLAP:</b> <span>SSAS, DuckDB</span></li></ul>",
             "url_img": "https://cdn-icons-png.flaticon.com/32/2329/2329087.png",
             "underline_class_css": "underline-blue",
             "initial_date": "2023-02-01"
@@ -50,7 +50,7 @@
         {
             "title": "FULL STACK DEVELOPER",
             "subtitle": "at VISIAN SYSTEMS",
-            "text": "Working for a software factory that provides services to clients based in the United Kingdom, engaging in various projects across different domains. Some of the projects include e-commerce platforms, client clustering and classification systems, and real-time people tracking systems for airports.",
+            "text": "Worked at a software factory serving UK clients, developing projects including e-commerce platforms, client clustering systems, and a security employee tracking system for Heathrow Airport. Built custom software for the French Government to manage and distribute NGO projects in Africa.",
             "company_logo": "logo-visian.jpg",
             "company_url": "https://www.visiansystems.com/",
             "initial_date": "2023-02-01"
