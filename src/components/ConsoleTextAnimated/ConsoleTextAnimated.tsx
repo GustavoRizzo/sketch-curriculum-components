@@ -82,9 +82,7 @@ export default function ConsoleTextAnimated ({console_phrases}:{console_phrases:
     return () => {
       window.clearInterval(typingIntervalId);
       window.clearInterval(blinkIntervalId);
-      if (timeoutId) {
-        window.clearTimeout(timeoutId);
-      }
+      window.clearTimeout(timeoutId);
     };
   }, [console_phrases]);
 
