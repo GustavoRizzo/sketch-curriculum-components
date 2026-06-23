@@ -7,16 +7,14 @@ import CareerTimeline from './pages/CareerTimeline';
 
 
 function App() {
-  const base = import.meta.env.BASE_URL;
-
   return (
     <>
       <div className='container'>
         <Routes>
-          <Route path={`${base}`} element={<Home />} />
-          <Route path={`${base}ListExpertises`} element={<ListExpertises />} />
-          <Route path={`${base}About`} element={<About />} />
-          <Route path={`${base}CareerTimeline`} element={<CareerTimeline />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/ListExpertises" element={<ListExpertises />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/CareerTimeline" element={<CareerTimeline />} />
 
           <Route
             path="*"

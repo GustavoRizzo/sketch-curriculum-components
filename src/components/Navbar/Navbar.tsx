@@ -3,17 +3,15 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import './style.scss'
 
 export default function Navbar() {
-    const base = import.meta.env.BASE_URL;
-
     const [isHidden, setIsHidden] = useState(true);
 
     const toggleVisibility = () => {
       setIsHidden(!isHidden);
     };
-    
+
     return (
         <nav className="navbar">
-            <Link to={base} className="navbar__title">Sketch Curriculum Components</Link>
+            <Link to="/" className="navbar__title">Sketch Curriculum Components</Link>
             <button onClick={toggleVisibility} className="navbar__toggle-button">
                 <span role="img" aria-label="Hide/Show">
                 👁️
@@ -21,9 +19,9 @@ export default function Navbar() {
             </button>
             {!isHidden && (
                 <ul className="navbar__options">
-                    <CustomLink to={`${base}ListExpertises`}>List Expertise</CustomLink>
-                    <CustomLink to={`${base}About`}>About</CustomLink>
-                    <CustomLink to={`${base}CareerTimeline`}>CareerTimeline</CustomLink>
+                    <CustomLink to="/ListExpertises">List Expertise</CustomLink>
+                    <CustomLink to="/About">About</CustomLink>
+                    <CustomLink to="/CareerTimeline">CareerTimeline</CustomLink>
                 </ul>
             )}
         </nav>
@@ -36,7 +34,7 @@ interface CustumLinkProps {
 }
 
 function CustomLink({ to, children, ...props }:CustumLinkProps) {
-    // The CustomLink do the same thing of Link (react-router-dom) component, but also add the style classe "active", if the URL match the router link.   
+    // The CustomLink do the same thing of Link (react-router-dom) component, but also add the style classe "active", if the URL match the router link.
     const resolvedPath = useResolvedPath(to);
     const isActive = useMatch({path: resolvedPath.pathname, end: true});
 
