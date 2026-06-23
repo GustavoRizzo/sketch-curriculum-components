@@ -16,11 +16,12 @@ export default function SectionExpertises() {
             <h1 style={{ marginTop: '5px' }}>Experience</h1>
             <div className="especialidades__grid">
 
-                {expertises.map((item, index) => (
-                    <CardExpertise 
-                        title={item.title} 
+                {expertises.map((item) => (
+                    <CardExpertise
+                        key={item.title}
+                        title={item.title}
                         html_text={item.html_text}
-                        url_img={item.url_img} 
+                        url_img={item.url_img}
                         underline_class_css= {item.underline_class_css}
                     />
                 ))}

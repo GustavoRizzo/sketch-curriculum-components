@@ -17,9 +17,9 @@ const ExperiencesTimeline: React.FC<ExperiencesTimelineProps> = ({ experiences }
   return (
     <div className="rb-container">
       <ul className="rb">
-        {experiences.map((experience, index) => (
-          <li className="rb-item" key={index}>
-            <a className="company-logo" 
+        {experiences.map((experience) => (
+          <li className="rb-item" key={`${experience.title}-${experience.initial_date}`}>
+            <a className="company-logo"
               style={{ backgroundImage: `url(${experience.company_logo})` }}
               href={experience.company_url} target="_blank" rel="noreferrer"
               ></a>
