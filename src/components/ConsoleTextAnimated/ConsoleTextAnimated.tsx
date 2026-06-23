@@ -1,75 +1,100 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { ConsolePhrase } from "../../types/ConsolePhrase";
 
 export default function ConsoleTextAnimated ({console_phrases}:{console_phrases: ConsolePhrase[]}) {
+  const textRef = useRef<HTMLSpanElement>(null);
+  const cursorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    consoleText(console_phrases);
-  }, []);  
+    if (console_phrases.length === 0) return;
 
-  const consoleText = (consoleInputs: ConsolePhrase[]) => {
+    // Work on a copy to avoid mutating the prop array
+    const consoleInputs = [...console_phrases];
+    
     const timeBeforeStartNewPhrase = 1000;
     const timeBeforeStartErase = 2000;
     const timeOfEachLetter = 120;
     const timeCursorBlink = 500;
 
-    let textElement = document.getElementById("console-text-id");
-    textElement!.setAttribute("style", "color:" + consoleInputs[0].color); // starting color
     let letterCount = 1;
     let directional = 1;  // 1: typing forward, -1: typing backwards
     let waiting = false;
-    let cursorElement = document.getElementById("console-cursor");
-    let visible = true;    
+    let visible = true;
+    let timeoutId: number | undefined;
 
-    window.setInterval(() => {
-      if (letterCount === 0 && waiting === false) {
+    // Set starting color
+    if (textRef.current) {
+      textRef.current.style.color = consoleInputs[0].color || "";
+    }
+
+    const typingIntervalId = window.setInterval(() => {
+      const textElement = textRef.current;
+      if (!textElement) return;
+
+      if (letterCount === 0 && !waiting) {
         waiting = true;
-        textElement!.innerHTML = consoleInputs[0].phrase.substring(0, letterCount);
+        textElement.innerHTML = consoleInputs[0].phrase.substring(0, letterCount);
 
         // Change Phrase
-        window.setTimeout(() => {
-          let input = consoleInputs!.shift();
-          consoleInputs.push(input!);
+        timeoutId = window.setTimeout(() => {
+          const input = consoleInputs.shift();
+          if (input) {
+            consoleInputs.push(input);
+          }
           directional = 1;          
           letterCount += directional;
           waiting = false;
           // set the new color
-          textElement!.setAttribute("style", "color:" + consoleInputs[0]!.color);
+          if (textRef.current) {
+            textRef.current.style.color = consoleInputs[0].color || "";
+          }
         }, timeBeforeStartNewPhrase);
 
-      } else if (letterCount === consoleInputs[0].phrase.length + 1 && waiting === false) {
+      } else if (letterCount === consoleInputs[0].phrase.length + 1 && !waiting) {
         // finished writing the phrase
         waiting = true;
-        window.setTimeout(() => {
+        timeoutId = window.setTimeout(() => {
           directional = -1;
           letterCount += directional;
           waiting = false;
         }, timeBeforeStartErase);
-      } else if (waiting === false) {
-        textElement!.innerHTML = consoleInputs[0].phrase.substring(0, letterCount);
+      } else if (!waiting) {
+        textElement.innerHTML = consoleInputs[0].phrase.substring(0, letterCount);
         letterCount += directional;
       }
     }, timeOfEachLetter);
 
     // Make the cursor blink
-    window.setInterval(() => {
-      if (visible === true) {
-        cursorElement!.className = "console-underscore hidden";
+    const blinkIntervalId = window.setInterval(() => {
+      const cursorElement = cursorRef.current;
+      if (!cursorElement) return;
+
+      if (visible) {
+        cursorElement.className = "console-underscore hidden";
         visible = false;
       } else {
-        cursorElement!.className = "console-underscore";
+        cursorElement.className = "console-underscore";
         visible = true;
       }
     }, timeCursorBlink);
 
-  };
+    // Cleanup function to clear intervals and timeout on unmount
+    return () => {
+      window.clearInterval(typingIntervalId);
+      window.clearInterval(blinkIntervalId);
+      if (timeoutId) {
+        window.clearTimeout(timeoutId);
+      }
+    };
+  }, [console_phrases]);
 
   return (
     <div className="console-container">
-      <span id="console-text-id"></span>
-      <div className="console-underscore hidden" id="console-cursor">
+      <span ref={textRef} id="console-text-id"></span>
+      <div ref={cursorRef} className="console-underscore hidden" id="console-cursor">
         ▊
       </div>
     </div>
   );
-};
+}
+
