@@ -1,13 +1,9 @@
 import ExperiencesTimeline from "../../components/ExperiencesTimeline/ExperiencesTimeline";
 import { Experience as ExperienceType } from "../../types/Experience";
 import data from '../../data/data.json';
-import { useEffect, useState } from 'react';
 
 export default function CareerTimeline() {
-      const [experiences, setExperiences] = useState<ExperienceType[]>([]);
-      useEffect(() => {
-        setExperiences(data.experiences);
-        }, []);
+      const experiences: ExperienceType[] = data.experiences;
 
       return (
         <section style={{ display: 'grid', justifyItems: 'center', alignContent: 'center' }}>

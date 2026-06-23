@@ -2,14 +2,9 @@ import './style.scss'
 import CardExpertise from './CardExpertise';
 import { Expertise } from '../../types/Expertise';
 import data from '../../data/data.json';
-import { useEffect, useState } from 'react';
 
 export default function SectionExpertises() {
-
-    const [expertises, setExpertises] = useState<Expertise[]>([]);
-    useEffect(() => {
-        setExpertises(data.expertises);
-      }, []);
+    const expertises: Expertise[] = data.expertises;
 
     return (
         <section className="especialidades">
