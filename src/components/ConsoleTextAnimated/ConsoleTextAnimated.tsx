@@ -10,7 +10,7 @@ export default function ConsoleTextAnimated ({console_phrases}:{console_phrases:
 
     // Work on a copy to avoid mutating the prop array
     const consoleInputs = [...console_phrases];
-    
+
     const timeBeforeStartNewPhrase = 1000;
     const timeBeforeStartErase = 2000;
     const timeOfEachLetter = 120;
@@ -33,7 +33,7 @@ export default function ConsoleTextAnimated ({console_phrases}:{console_phrases:
 
       if (letterCount === 0 && !waiting) {
         waiting = true;
-        textElement.innerHTML = consoleInputs[0].phrase.substring(0, letterCount);
+        textElement.textContent = consoleInputs[0].phrase.substring(0, letterCount);
 
         // Change Phrase
         timeoutId = window.setTimeout(() => {
@@ -41,7 +41,7 @@ export default function ConsoleTextAnimated ({console_phrases}:{console_phrases:
           if (input) {
             consoleInputs.push(input);
           }
-          directional = 1;          
+          directional = 1;
           letterCount += directional;
           waiting = false;
           // set the new color
@@ -59,7 +59,7 @@ export default function ConsoleTextAnimated ({console_phrases}:{console_phrases:
           waiting = false;
         }, timeBeforeStartErase);
       } else if (!waiting) {
-        textElement.innerHTML = consoleInputs[0].phrase.substring(0, letterCount);
+        textElement.textContent = consoleInputs[0].phrase.substring(0, letterCount);
         letterCount += directional;
       }
     }, timeOfEachLetter);
@@ -95,4 +95,3 @@ export default function ConsoleTextAnimated ({console_phrases}:{console_phrases:
     </div>
   );
 }
-

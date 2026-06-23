@@ -1,6 +1,9 @@
 import { Expertise } from "../../types/Expertise";
+import { sanitizeHtml } from "../../utils/sanitizeHtml";
 
 export default function CardExpertise( {title, html_text, url_img, underline_class_css}:Expertise ) {
+    const safeHtmlText = sanitizeHtml(html_text);
+
     return (
         <div className="card">
             <div className="card__icon">
@@ -15,7 +18,7 @@ export default function CardExpertise( {title, html_text, url_img, underline_cla
                     {title}
                 </span>
             </h2>
-            <div className="card__text" dangerouslySetInnerHTML={{ __html: html_text }} />
+            <div className="card__text" dangerouslySetInnerHTML={{ __html: safeHtmlText }} />
         </div>
     );
 }
