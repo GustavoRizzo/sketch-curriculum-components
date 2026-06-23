@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@use "../../styles/variables" as *;
 
-@import "../../styles/_variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 
 body {
     background: $background-color;

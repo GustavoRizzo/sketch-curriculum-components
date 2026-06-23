@@ -1,12 +1,12 @@
-@import "../../styles/variables.scss";
+@use "../../styles/variables" as *;
 
- 
+
   body {
     background: $background-color;
     color: $default-text-color;
     font-family: $default-font-family;
   }
-  
+
   .about {
     display: grid;
     justify-items: center;
@@ -14,7 +14,7 @@
     min-height: 90vh;
     width: 100wh;
     padding-top: 60px;
-  
+
     &_img_perfil {
       border-radius: 50%;
       width: min(90%, 400px);
@@ -30,7 +30,7 @@
       );
     }
   }
-  
+
   //  CONSOLE
   .hidden {
     opacity: 0;
@@ -51,21 +51,20 @@
     top: -0.14em;
     left: 10px;
   }
-  
+
   // Contact
-  
+
   .list_contato {
     display: flex;
     gap: 30px;
-  
+
     .linkedin {
       width: 30px;
       border-radius: 15%;
     }
-  
+
     .github {
       width: 30px;
       border-radius: 15%;
     }
   }
-  
